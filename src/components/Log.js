@@ -9,7 +9,7 @@ class Log extends React.Component {
             </div>
           
             <div className="Log-container">
-              <h1>Тут будет история ходов</h1>
+              <h2>Тут будет история ходов</h2>
             </div>
           </>
   }

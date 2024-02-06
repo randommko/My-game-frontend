@@ -1,6 +1,6 @@
 import './App.css';
 import GameField from './components/GameField';
-import Log from './Log';
+import Log from './components/Log';
 import Header from './components/Header';
 
 function App() {
