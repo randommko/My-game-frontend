@@ -67,8 +67,9 @@
 .cell {
   display: grid;
   /*background-color: cadetblue;*/
-  max-width: 40px;
-  max-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
   justify-items: center;
   align-items: center;
 }
