@@ -7,7 +7,7 @@ import humanImg from "../img/human.jpg"
 
 class GameField extends React.Component {
   render() {
-    return <>
+    return <div className='Field'>
             <div className="Field-title">
               <h2>Игровое поле</h2>
             </div>
@@ -102,8 +102,7 @@ class GameField extends React.Component {
                 <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
                 <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
             </div>
-            
-          </>
+           </div>
   }
 }
 

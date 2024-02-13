@@ -3,7 +3,7 @@ import '../App.css'
 
 class Log extends React.Component {
   render() {
-    return <>
+    return <div className='Log'>
             <div className="Log-title">
               <h2>История ходов</h2>
             </div>
@@ -11,7 +11,7 @@ class Log extends React.Component {
             <div className="Log-container">
               <h2>Тут будет история ходов</h2>
             </div>
-          </>
+          </div>
   }
 }
 
