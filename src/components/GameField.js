@@ -15,8 +15,7 @@ class GameField extends React.Component {
       gridTemplateRows: "repeat(9, 40px)",
       gap: "5px",
       margin: "2px",
-      padding: "5px",
-      width: "50%"
+      padding: "5px"
     }
     return <div>
             <div style={FieldContainerStyle}>

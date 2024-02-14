@@ -7,8 +7,7 @@ class Title extends React.Component {
             borderRadius: "4px",
             margin: "2px",
             padding: "5px",
-            maxHeight: "auto",
-            width: "50%"
+            maxHeight: "auto"
           }
         return (
             <div style={TitleStyle}>

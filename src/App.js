@@ -6,6 +6,10 @@ import Footer from './components/Footer'
 import Title from './components/Title';
 import React from 'react';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 function App() {
   
@@ -21,33 +25,33 @@ function App() {
     padding: "10px 0" /* Отступ сверху и снизу */
   }
 
-  // const MainStyle = {
-  //   display: "grid",
-  //   border: "1px solid rgb(255, 255, 255, 0.2)",
-  //   borderRadius: "4px",
-  //   gridTemplateColumns: "repeat(2, 'auto')",
-  //   gap: "5px",
-  //   margin: "2px",
-  //   padding: "5px"
-  // }
-  const MainStyle = {
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    alignItems: "stretch"
-  }
   return (
     <div className="App">
       <div style={BackgroundStyle}>
-      <Header/>
-      <div style={MainStyle}>
-        <Title title="Игровое поле"/>
-        <Title title="История ходов"/>
-        <GameField/>
-        <Log/>
-        <Footer/>
-      </div>
+        <Container>
+          <Row>
+            <Header/>
+          </Row>
+          <Row>
+            <Col>
+              <Title title="Игровое поле"/>
+            </Col>
+            <Col>
+              <Title title="История ходов"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <GameField/>
+            </Col>
+            <Col>
+              <Log/>
+            </Col>
+          </Row>
+          <Row>
+            <Footer/>
+          </Row>
+        </Container>
       </div>
     </div>
   );

@@ -13,8 +13,7 @@ class Footer extends React.Component {
       display: "grid",
       gridAutoFlow: "column",
       gap: "1em",
-      margin: "2px",
-      width: "100%"
+      margin: "2px"
     }
     const doGameStep = () => {
       console.log("Нажали кнопку выполенняи шага")
