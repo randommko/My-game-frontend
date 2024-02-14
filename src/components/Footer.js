@@ -2,6 +2,7 @@
 
 import React from 'react'
 import '../App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 
@@ -25,8 +26,8 @@ class Footer extends React.Component {
 
     return(
       <div style={footerStyle}>
-        <button onClick={testConnection}>Test connection</button>
-        <button onClick={doGameStep}>Следующий ход</button>
+        <Button variant="primary" onClick={testConnection}>Test connection</Button> {' '}
+        <Button variant="secondary" onClick={doGameStep}>Следующий ход</Button> {' '}
       </div>
     );
   }
