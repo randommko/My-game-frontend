@@ -5,9 +5,11 @@ import Header from './components/Header';
 import Footer from './components/Footer'
 
 function App() {
+  
   const BackgroundStyle = {
     height: "1000px",
-    background: "url(./img/orc-and-humans-img.png) rgba(0, 0, 0, 0.855)", /* Прописываем путь к картинке и задаем цвет и прозрачность */
+    /*TODO: не работает картинка на фоне*/
+    background: "rgba(0, 0, 0, 0.855)", /* Прописываем путь к картинке и задаем цвет и прозрачность */
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundBlendMode: "multiply",

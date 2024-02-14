@@ -18,9 +18,11 @@ class Cell extends React.Component {
             justifyItems: "center",
             alignItems: "center",
         };
+        
         const cellType = this.props.type;
         let cellImage = '';
         let cellTitle = '';
+
         if (cellType === "grass") {
             cellTitle = 'Grass';
             cellImage = grassImg;

@@ -7,10 +7,18 @@ import '../App.css'
 
 class Footer extends React.Component {
   render() {
+    const doGameStep = () => {
+      console.log("Нажали кнопку выполенняи шага")
+    };
+
+    const testConnection = () => {
+      console.log("Проверка соедения с сервером")
+    };
+
     return(
       <div>
-        <button className="main_butoon" onclick="testConnection()">Test connection</button>
-        <button className="main_butoon" title="Запросить следующий ход от сервера" onclick="doGameStep()">Следующий ход</button>
+        <button onClick={testConnection}>Test connection</button>
+        <button onClick={doGameStep}>Следующий ход</button>
       </div>
     );
   }
