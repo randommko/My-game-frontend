@@ -3,8 +3,8 @@ import GameField from './components/GameField';
 import Log from './components/Log';
 import Header from './components/Header';
 import Footer from './components/Footer'
-import GameFieldTitle from './components/GameFieldTitle';
-import LogTitle from './components/LogTitle';
+import Title from './components/Title';
+
 
 function App() {
   
@@ -20,25 +20,30 @@ function App() {
     padding: "10px 0" /* Отступ сверху и снизу */
   }
 
+  // const MainStyle = {
+  //   display: "grid",
+  //   border: "1px solid rgb(255, 255, 255, 0.2)",
+  //   borderRadius: "4px",
+  //   gridTemplateColumns: "repeat(2, 'auto')",
+  //   gap: "5px",
+  //   margin: "2px",
+  //   padding: "5px"
+  // }
   const MainStyle = {
-    display: "grid",
-    gridAutoFlow: "row",
-    border: "1px solid rgb(255, 255, 255, 0.2)",
-    borderRadius: "4px",
-    gridTemplateColumns: "auto auto",
-    gridTemplateRows: "auto auto auto",
-    gap: "5px",
-    margin: "2px",
-    padding: "5px"
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "stretch"
   }
   return (
     <div className="App">
       <div style={BackgroundStyle}>
       <Header/>
       <div style={MainStyle}>
-        <GameFieldTitle/>
+      <Title title="Игровое поле"/>
+        <Title title="История ходов"/>
         <GameField/>
-        <LogTitle/>
         <Log/>
         <Footer/>
       </div>

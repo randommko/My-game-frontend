@@ -2,12 +2,12 @@
 
 import React from 'react'
 import '../App.css'
-import Title from './Title'
+import GameTitle from './GameTitle'
 
 
 class Header extends React.Component {
   render() {
-    return <Title/>
+    return <GameTitle/>
   }
 }
 

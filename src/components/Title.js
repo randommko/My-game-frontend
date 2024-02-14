@@ -1,19 +1,19 @@
-import React from 'react'
-import '../App.css'
-
+import React from "react";
 
 class Title extends React.Component {
-  render() {
-    const MainTitleStyle = {
-      display: "grid",
-      background: "linear-gradient(to left, rgb(255, 255, 255, 0), rgba(30, 144, 255, 0.3), rgb(255, 255, 255, 0))",
-      height: "60px",
-      alignContent: "center"
-    }
-    return <div style={MainTitleStyle}>
-              <h1>ORC and HUMANS</h1>
+    render() { 
+        const TitleStyle = {
+            border: "1px solid rgb(255, 255, 255, 0.2)",
+            borderRadius: "4px",
+            margin: "2px",
+            padding: "5px"
+          }
+        return (
+            <div style={TitleStyle}>
+                <h2>{this.props.title} (title)</h2>
             </div>
-  }
+        )
+    };
 }
 
-export default Title
+export default Title;
