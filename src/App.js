@@ -41,7 +41,7 @@ function App() {
       <div style={BackgroundStyle}>
       <Header/>
       <div style={MainStyle}>
-      <Title title="Игровое поле"/>
+        <Title title="Игровое поле"/>
         <Title title="История ходов"/>
         <GameField/>
         <Log/>

@@ -6,7 +6,9 @@ class Title extends React.Component {
             border: "1px solid rgb(255, 255, 255, 0.2)",
             borderRadius: "4px",
             margin: "2px",
-            padding: "5px"
+            padding: "5px",
+            maxHeight: "auto",
+            width: "50%"
           }
         return (
             <div style={TitleStyle}>
