@@ -4,7 +4,7 @@ import '../App.css'
 class Log extends React.Component {
   render() {
     return <div className='Log'>
-            <div className="Log-title">
+            <div className="Log-title" style={{height: '79px'}}>
               <h2>История ходов</h2>
             </div>
           

@@ -1,106 +1,130 @@
 import React from 'react'
-import '../App.css'
 
-import grassImg from "../img/grass.jpg"
-import orcImg from "../img/orc.png"
-import humanImg from "../img/human.jpg"
+
+import Cell from "../components/Cell.js"
+import TitleCell from './TitleCell.js'
 
 class GameField extends React.Component {
   render() {
-    return <div className='Field'>
-            <div className="Field-title">
+    const FieldTitleStyle = {
+      border: "1px solid rgb(255, 255, 255, 0.2)",
+      borderRadius: "4px",
+      margin: "2px",
+      padding: "5px"
+    }
+
+    const FieldStyle = {
+      display: "grid",
+      gridAutoFlow: "row",
+      gridTemplateColumns: "auto",
+      gridTemplateRows: "auto auto"
+    }
+
+    const FieldContainerStyle = {
+      display: "grid",
+      gridAutoFlow: "column",
+      border: "1px solid rgb(255, 255, 255, 0.2)",
+      borderRadius: "4px",
+      gridTemplateColumns: "repeat(9, 40px)",
+      gridTemplateRows: "repeat(9, 40px)",
+      gap: "5px",
+      margin: "2px",
+      padding: "5px"
+    }
+    return <div style={FieldStyle}>
+            <div style={FieldTitleStyle}>
               <h2>Игровое поле</h2>
             </div>
-            <div className="Field-container" >
+            <div style={FieldContainerStyle}>
             <div> </div>
-                <div className="title_cell"> 1 </div>
-                <div className="title_cell"> 2 </div>
-                <div className="title_cell"> 3 </div>
-                <div className="title_cell"> 4 </div>
-                <div className="title_cell"> 5 </div>
-                <div className="title_cell"> 6 </div>
-                <div className="title_cell"> 7 </div>
-                <div className="title_cell"> 8 </div>
+                <TitleCell num='1'/>
+                <TitleCell num='2'/>
+                <TitleCell num='3'/>
+                <TitleCell num='4'/>
+                <TitleCell num='5'/>
+                <TitleCell num='6'/>
+                <TitleCell num='7'/>
+                <TitleCell num='8'/>
 
-                <div className="title_cell"> 1 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='1'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 2 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={orcImg} title="Orc"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='2'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="orc"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 3 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='3'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 4 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='4'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 5 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='5'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 6 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={humanImg} title="Human"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='6'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="human"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 7 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='7'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
 
-                <div className="title_cell"> 8 </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
-                <div className="cell"> <img className="cell" src={grassImg} title="Grass"/> </div>
+                <TitleCell num='8'/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
+                <Cell type="grass"/>
             </div>
            </div>
   }
