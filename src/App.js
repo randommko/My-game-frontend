@@ -4,6 +4,7 @@ import Log from './components/Log';
 import Header from './components/Header';
 import Footer from './components/Footer'
 import Title from './components/Title';
+import React from 'react';
 
 
 function App() {
