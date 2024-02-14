@@ -5,11 +5,33 @@ import Header from './components/Header';
 import Footer from './components/Footer'
 
 function App() {
+  const BackgroundStyle = {
+    height: "1000px",
+    background: "url(./img/orc-and-humans-img.png) rgba(0, 0, 0, 0.855)", /* Прописываем путь к картинке и задаем цвет и прозрачность */
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundBlendMode: "multiply",
+    textAlign: "center", /* Текст по центру */
+    color: "#fff", /* Цвет текста */
+    padding: "10px 0" /* Отступ сверху и снизу */
+  }
+
+  const MainStyle = {
+    display: "grid",
+    gridAutoFlow: "row",
+    border: "1px solid rgb(255, 255, 255, 0.2)",
+    borderRadius: "4px",
+    gridTemplateColumns: "auto auto",
+    gridTemplateRows: "auto auto auto",
+    gap: "5px",
+    margin: "2px",
+    padding: "5px"
+  }
   return (
     <div className="App">
-      <div className="Background-img">
+      <div style={BackgroundStyle}>
       <Header/>
-      <div className="Main-container">
+      <div style={MainStyle}>
         <GameField/>
         <Log/>
         <Footer/>
