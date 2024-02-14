@@ -8,6 +8,7 @@ import TitleCell from './TitleCell.js'
 class GameField extends React.Component {
   render() {
     const cellSize = '60px';
+    const fieldSize = 9;
     const FieldContainerStyle = {
       display: "grid",
       gridAutoFlow: "column",
@@ -21,8 +22,8 @@ class GameField extends React.Component {
     }
 
     var newField = []
-    for (var i = 0; i < 9; i++) {
-      for (var j = 0; j < 9; j++) {
+    for (var i = 0; i < fieldSize; i++) {
+      for (var j = 0; j < fieldSize; j++) {
         if (i === 0 && j === 0)
           newField.push(<TitleCell width={cellSize} height={cellSize}></TitleCell>)
         else if (i === 0)
@@ -33,11 +34,6 @@ class GameField extends React.Component {
           newField.push(<Cell type="grass" width={cellSize} height={cellSize}/>)
       }
     }
-
-    // var field = []
-    // for (var k = 0; k < 64; k++) {
-    //   field.push(<Cell type="grass" width={cellSize} height={cellSize}/>)
-    // }
 
     return <div>
             <div style={FieldContainerStyle}>
