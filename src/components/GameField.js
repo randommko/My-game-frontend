@@ -4,110 +4,44 @@ import React from 'react'
 import Cell from "../components/Cell.js"
 import TitleCell from './TitleCell.js'
 
+
 class GameField extends React.Component {
   render() {
+    const cellSize = '60px';
     const FieldContainerStyle = {
       display: "grid",
       gridAutoFlow: "column",
       border: "1px solid rgb(255, 255, 255, 0.2)",
       borderRadius: "4px",
-      gridTemplateColumns: "repeat(9, 40px)",
-      gridTemplateRows: "repeat(9, 40px)",
+      gridTemplateColumns: "repeat(9, 60px)",
+      gridTemplateRows: "repeat(9, 60px)",
       gap: "5px",
       margin: "2px",
       padding: "5px"
     }
+
+    var newField = []
+    for (var i = 0; i < 9; i++) {
+      for (var j = 0; j < 9; j++) {
+        if (i === 0 && j === 0)
+          newField.push(<TitleCell width={cellSize} height={cellSize}></TitleCell>)
+        else if (i === 0)
+          newField.push(<TitleCell text={j} width={cellSize} height={cellSize}></TitleCell>)
+        else if (j === 0)
+          newField.push(<TitleCell text={i} width={cellSize} height={cellSize}></TitleCell>)
+        else if (i !== 0 && j !== 0) 
+          newField.push(<Cell type="grass" width={cellSize} height={cellSize}/>)
+      }
+    }
+
+    // var field = []
+    // for (var k = 0; k < 64; k++) {
+    //   field.push(<Cell type="grass" width={cellSize} height={cellSize}/>)
+    // }
+
     return <div>
             <div style={FieldContainerStyle}>
-            <div> </div>
-                <TitleCell num='1'/>
-                <TitleCell num='2'/>
-                <TitleCell num='3'/>
-                <TitleCell num='4'/>
-                <TitleCell num='5'/>
-                <TitleCell num='6'/>
-                <TitleCell num='7'/>
-                <TitleCell num='8'/>
-
-                <TitleCell num='1'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='2'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="orc"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='3'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='4'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='5'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='6'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="human"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='7'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-
-                <TitleCell num='8'/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
-                <Cell type="grass"/>
+              {newField}
             </div>
            </div>
   }

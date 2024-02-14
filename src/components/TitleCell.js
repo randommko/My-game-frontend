@@ -9,11 +9,11 @@ class TitleCell extends React.Component {
             color: "rgb(255, 255, 255)",
             justifyItems: "center",
             alignItems: "center",
-            fontWeight: "bold",
+            fontWeight: "bold"
         };
         return (
-            <div style={cellStyle}>
-                {this.props.num}
+            <div style={cellStyle} width={this.props.width} height={this.props.height}>
+                {this.props.text}
             </div>
         )
     };

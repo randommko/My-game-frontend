@@ -25,8 +25,8 @@ class Footer extends React.Component {
 
     return(
       <div style={footerStyle}>
-        <Button variant="primary" onClick={testConnection}>Test connection</Button> {' '}
-        <Button variant="secondary" onClick={doGameStep}>Следующий ход</Button> {' '}
+        <Button variant="primary" onClick={doGameStep}>Следующий ход</Button> {' '}
+        <Button variant="secondary" onClick={testConnection}>Test connection</Button> {' '}
       </div>
     );
   }

@@ -36,7 +36,7 @@ function App() {
             <Col>
               <Title title="Игровое поле"/>
             </Col>
-            <Col>
+            <Col xs={4}>
               <Title title="История ходов"/>
             </Col>
           </Row>
@@ -44,7 +44,7 @@ function App() {
             <Col>
               <GameField/>
             </Col>
-            <Col>
+            <Col xs={4}>
               <Log/>
             </Col>
           </Row>

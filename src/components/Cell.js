@@ -12,11 +12,9 @@ class Cell extends React.Component {
         const cellStyle = {
             display: "grid",
             /*background-color: cadetblue;*/
-            width: "40px",
-            height: "40px",
             borderRadius: "2px",
             justifyItems: "center",
-            alignItems: "center",
+            alignItems: "center"
         };
         
         const cellType = this.props.type;
@@ -38,7 +36,7 @@ class Cell extends React.Component {
             }
 
         return (<>
-                    <div> <img style={cellStyle} src={cellImage} title={cellTitle} alt=''/> </div>
+                    <div> <img style={cellStyle} src={cellImage} width={this.props.width} height={this.props.height} title={cellTitle} alt=''/> </div>
                 </>
         )
     };
