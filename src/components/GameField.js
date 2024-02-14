@@ -6,20 +6,6 @@ import TitleCell from './TitleCell.js'
 
 class GameField extends React.Component {
   render() {
-    const FieldTitleStyle = {
-      border: "1px solid rgb(255, 255, 255, 0.2)",
-      borderRadius: "4px",
-      margin: "2px",
-      padding: "5px"
-    }
-
-    const FieldStyle = {
-      display: "grid",
-      gridAutoFlow: "row",
-      gridTemplateColumns: "auto",
-      gridTemplateRows: "auto auto"
-    }
-
     const FieldContainerStyle = {
       display: "grid",
       gridAutoFlow: "column",
@@ -31,10 +17,7 @@ class GameField extends React.Component {
       margin: "2px",
       padding: "5px"
     }
-    return <div style={FieldStyle}>
-            <div style={FieldTitleStyle}>
-              <h2>Игровое поле</h2>
-            </div>
+    return <div>
             <div style={FieldContainerStyle}>
             <div> </div>
                 <TitleCell num='1'/>

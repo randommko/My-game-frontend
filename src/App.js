@@ -3,6 +3,8 @@ import GameField from './components/GameField';
 import Log from './components/Log';
 import Header from './components/Header';
 import Footer from './components/Footer'
+import GameFieldTitle from './components/GameFieldTitle';
+import LogTitle from './components/LogTitle';
 
 function App() {
   
@@ -34,7 +36,9 @@ function App() {
       <div style={BackgroundStyle}>
       <Header/>
       <div style={MainStyle}>
+        <GameFieldTitle/>
         <GameField/>
+        <LogTitle/>
         <Log/>
         <Footer/>
       </div>
